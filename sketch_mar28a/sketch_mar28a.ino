@@ -1,6 +1,7 @@
 #include <Servo.h>
-#include "Countimer.h"
+#include <Timer.h>
 
+Timer t;
 int redPin = 3;
 int bluePin = 5;
 int greenPin = 6;
@@ -18,29 +19,17 @@ void setup() {
 
     pinMode(MQ3, INPUT);
 
-  /*This is a timer.*/
-  timer.setCounter(0, 0, 10, timer.COUNT_DOWN, onComplete);
-  timer.setInterval(refreshClock,1000);
-    
+  /*This is a timer.*/    
 
 
 }
 
-void redreshClock(){
-  Serial.print("Current time:")
-  Serial.printlm(timer.getCurrenttime());
-  /*Will need to be modified.*/
-}
 
-void onComplete()
-{
-  Serial.println("Time out.");
-}
 }
 void loop() {
 
   //running timer.
-  timer.run();
+  
   
   // put your main code here, to run repeatedly:
     
@@ -66,13 +55,12 @@ void loop() {
     delay(100);
      
     }
+
+      t.every(1000, takeReading); 
+    
        analogWrite(redPin,50);
        analogWrite(bluePin,50);
        analogWrite(greenPin,50);
        
-    if(!timer.isCounterCompleter())
-    {
-      timer.start();
-    }
 
 }
