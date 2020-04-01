@@ -53,11 +53,25 @@ void loop() {
         }
     delay(100);
 
-      t.every(1000, takeReading); 
+      //t.every(1000, takeReading); 
     
-       analogWrite(redPin,50);
-       analogWrite(bluePin,50);
-       analogWrite(greenPin,50);
+       //analogWrite(redPin,50);
+       //analogWrite(bluePin,50);
+       //analogWrite(greenPin,50);
        
 
+}
+
+void changeColor()
+{
+   analogWrite(redPin,100);
+   analogWrite(bluePin,0);
+   analogWrite(greenPin,0);
+
+   delay(100);
+
+   analogWrite(redPin,0);
+   analogWrite(bluePin,0);
+   analogWrite(greenPin,100);
+   
 }
