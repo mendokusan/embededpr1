@@ -40,25 +40,26 @@ void loop() {
    // This will light the led if alcohol is present
     Serial.println(value);
     
-      if(value > 400)
-      {
-        analogWrite(redPin,100);
-        analogWrite(bluePin,100);
-        analogWrite(greenPin,100);
-      }
-      else{
-         analogWrite(redPin,0);
-        analogWrite(bluePin,0);
-        analogWrite(greenPin,0);    
-        }
-    delay(100);
+      //if(value > 400)
+      //{
+        //analogWrite(redPin,100);
+        //analogWrite(bluePin,100);
+        //analogWrite(greenPin,100);
+      //}
+      //else{
+         //analogWrite(redPin,0);
+        //analogWrite(bluePin,0);
+        //analogWrite(greenPin,0);    
+        //}
+    //delay(100);
 
       //t.every(1000, takeReading); 
     
        //analogWrite(redPin,50);
        //analogWrite(bluePin,50);
        //analogWrite(greenPin,50);
-       
+
+       changeColor();
 
 }
 
