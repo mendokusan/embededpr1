@@ -39,8 +39,7 @@ void loop() {
 
    // This will light the led if alcohol is present
     Serial.println(value);
-   while(value>0) //may remove
-    {
+    
       if(value > 400)
       {
         analogWrite(redPin,100);
@@ -53,8 +52,6 @@ void loop() {
         analogWrite(greenPin,0);    
         }
     delay(100);
-     
-    }
 
       t.every(1000, takeReading); 
     
