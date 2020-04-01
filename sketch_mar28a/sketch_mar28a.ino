@@ -59,15 +59,15 @@ void loop() {
 
        if(value>350)
        {
-        changeToRed();
+        failedTest();
        }
        else{
-        changeToGreen();
+        passedTest;
         }
 
 }
 
-void changeToGreen()
+void failedTest()
 {
 
    delay(100);
@@ -77,7 +77,7 @@ void changeToGreen()
    
 }
 
-void changeToRed()
+void passedTest()
 {
 
    delay(100);
