@@ -59,11 +59,17 @@ void loop() {
        //analogWrite(bluePin,50);
        //analogWrite(greenPin,50);
 
-       changeColor();
+       if(value>350)
+       {
+        changeToRed();
+       }
+       else{
+        changetoGreen();
+        }
 
 }
 
-void changeColor()
+void changeToGreen()
 {
    analogWrite(redPin,100);
    analogWrite(bluePin,0);
@@ -74,5 +80,19 @@ void changeColor()
    analogWrite(redPin,0);
    analogWrite(bluePin,0);
    analogWrite(greenPin,100);
+   
+}
+
+void changeToRed()
+{
+   analogWrite(redPin,0);
+   analogWrite(bluePin,0);
+   analogWrite(greenPin,100);
+
+   delay(100);
+
+   analogWrite(redPin,100);
+   analogWrite(bluePin,0);
+   analogWrite(greenPin,0);
    
 }
