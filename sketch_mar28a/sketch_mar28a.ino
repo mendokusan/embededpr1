@@ -74,6 +74,7 @@ void failedTest()
    analogWrite(bluePin,0);
    analogWrite(greenPin,0);
    delay(100);
+   passedTest();
 }
 
 void passedTest()
@@ -83,5 +84,6 @@ void passedTest()
    analogWrite(bluePin,0);
    analogWrite(greenPin,100);
    delay(100);
+   
    
 }
