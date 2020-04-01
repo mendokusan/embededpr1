@@ -62,7 +62,7 @@ void loop() {
         failedTest();
        }
        else{
-        passedTest;
+        passedTest();
         }
 
 }
@@ -70,19 +70,18 @@ void loop() {
 void failedTest()
 {
 
-   delay(100);
    analogWrite(redPin,0);
    analogWrite(bluePin,0);
    analogWrite(greenPin,100);
-   
+   delay(100);
 }
 
 void passedTest()
 {
 
-   delay(100);
    analogWrite(redPin,100);
    analogWrite(bluePin,0);
    analogWrite(greenPin,0);
+   delay(100);
    
 }
