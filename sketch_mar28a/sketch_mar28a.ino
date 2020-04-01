@@ -62,7 +62,7 @@ void loop() {
         changeToRed();
        }
        else{
-        changetoGreen();
+        changeToGreen();
         }
 
 }
