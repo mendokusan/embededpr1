@@ -44,6 +44,10 @@ void loop() {
     delay(100);
      
     }
+
+       analogWrite(redPin,50);
+       analogWrite(bluePin,50);
+       analogWrite(greenPin,50);
     
 
 }
