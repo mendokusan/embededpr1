@@ -1,7 +1,5 @@
 #include <Servo.h>
-#include <Timer.h>
 
-Timer t;
 int redPin = 3;
 int bluePin = 5;
 int greenPin = 6;
